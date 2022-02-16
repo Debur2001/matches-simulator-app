@@ -14,3 +14,8 @@ App criado seguindo curso da DIO em parceria com a Sportheca apresentado pelo Ve
 3. Java e Kotlin Juntos!? Construindo Apps Android
     - branch: [release/java-e-kotlin-juntos-construindo-apps-android](https://github.com/Debur2001/matches-simulator-app/tree/release/java-e-kotlin-juntos-construindo-apps-android)
 
+4. Explorando o Firebase Para Apps Android Resilientes
+
+    - branch: [release/explorando-o-firebase-para-apps-android-resilientes](https://github.com/Debur2001/matches-simulator-app/tree/release/explorando-o-firebase-para-apps-android-resilientes)
+
+
