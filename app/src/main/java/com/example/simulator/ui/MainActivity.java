@@ -3,12 +3,10 @@ package com.example.simulator.ui;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.simulator.R;
 import com.example.simulator.data.MatchesAPI;
@@ -101,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Match>> call, Throwable t) {
+                Exception e = new Exception();
+                e.printStackTrace();
                 showErrorMessage();
                 binding.srlMatches.setRefreshing(false);
             }
