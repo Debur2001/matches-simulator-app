@@ -39,14 +39,14 @@ class DetailActivity : AppCompatActivity() {
             binding.tvHomeTeamName.text = it.homeTeam.name
             binding.rbHomeTeamStars.rating = it.homeTeam.stars.toFloat()
             if (it.homeTeam.score != null) {
-                binding.tvHomeTeamName.text = it.homeTeam.score.toString()
+                binding.tvHomeTeamScore.text = it.homeTeam.score.toString()
             }
 
             Glide.with(this).load(it.awayTeam.image).into(binding.ivAwayTeam)
             binding.tvAwayTeamName.text = it.awayTeam.name
             binding.rbAwayTeamStars.rating = it.awayTeam.stars.toFloat()
             if (it.awayTeam.score != null) {
-                binding.tvAwayTeamName.text = it.awayTeam.score.toString()
+                binding.tvAwayTeamScore.text = it.awayTeam.score.toString()
             }
         }
     }
