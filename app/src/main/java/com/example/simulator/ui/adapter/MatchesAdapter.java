@@ -3,18 +3,18 @@ package com.example.simulator.ui.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+
+import java.util.List;
+
 import com.example.simulator.databinding.MatchItemBinding;
 import com.example.simulator.domain.Match;
 import com.example.simulator.ui.DetailActivity;
-
-import java.util.List;
 
 public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHolder> {
 
@@ -50,7 +50,7 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHold
         Glide.with(context).load(match.getAwayTeam().getImage()).circleCrop().into(holder.binding.ivAwayTeam);
         holder.binding.tvAwayTeamName.setText(match.getAwayTeam().getName());
         if (match.getAwayTeam().getScore() != null) {
-            holder.binding.tvHomeTeamScore.setText(String.valueOf(match.getAwayTeam().getScore()));
+            holder.binding.tvAwayTeamScore.setText(String.valueOf(match.getAwayTeam().getScore()));
         }
 
         holder.itemView.setOnClickListener(view -> {
@@ -63,10 +63,10 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return 0;
+        return matches.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
         private final MatchItemBinding binding;
 
